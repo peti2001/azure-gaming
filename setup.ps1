@@ -30,13 +30,11 @@ if ($manual_install) {
     Disable-InternetExplorerESC
     Edit-VisualEffectsRegistry
 }
-Add-DisconnectShortcut
 
+Add-DisconnectShortcut
 Install-Chocolatey
-Install-VPN
-Join-Network $network
 Install-NSSM
 
 Install-NvidiaDriver $manual_install
 Set-ScheduleWorkflow $admin_username $admin_password $manual_install
-Restart-Computer
+Restart-Computer 
